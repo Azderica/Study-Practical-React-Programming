@@ -15,3 +15,10 @@
 
 - `https://unpkg.com/react@16.14.0/umd/react.development.js`
 - `https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js`
+
+## 바벨 사용하기
+
+- 자바스크립트 코드를 변환해 주는 컴파일러
+- 최신 자바스크립트 문법을 지원하지 않는 환경에서도 최신 문법 사용 가능
+- 그 외에도 다양한 용도로 사용
+- 리액트에서는 JSX 문법을 사용하기 위해 바벨을 사용
