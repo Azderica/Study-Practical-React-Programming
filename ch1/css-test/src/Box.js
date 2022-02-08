@@ -1,10 +1,21 @@
 import React from 'react';
-import Style from './Box.module.scss'
+import styled from 'styled-components';
+
+const BoxCommon = styled.div`
+  height: 50px;
+  background-color: #aaaaaa;
+`;
+const BoxBig = styled(BoxCommon)`
+  width: 200px;
+`;
+const BoxSmall = styled(BoxCommon)`
+  width: 100px;
+`;
 
 export default function Box({ size }) {
   if (size == 'big') {
-    return <div className={`${Style.box} ${Style.big}`} > 큰 박스</ div>
+    return <BoxBig>큰 박스</BoxBig>;
   } else {
-    return <div className={`${Style.box} ${Style.small}`} >작은 박스</div>
+    return <BoxSmall>작은 박스</BoxSmall>;
   }
 }

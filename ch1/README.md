@@ -90,7 +90,7 @@
 - CRA를 기반으로 직접 개발환경을 구축하고 싶을 때 사용하는 것, 추출을 하지 않으면 CRA의 기능이 추가됐을 때 단순히 react-script 버전만 올리면 되는데 수출을 하면 자동으로 설정 파일을 수정해야 한다는 단점이 있음.
   - 꼭 필요한 경우가 아니면 관리적 측면에서는 좋지 않음
 
-## 브라우저 지원 여부 체크
+### 브라우저 지원 여부 체크
 
 - caniuse.com 에서 지원하는지 안지원하는 지 확인할 수 있습니다.
 - https://caniuse.com/?search=padStart
@@ -98,7 +98,7 @@
   - `import 'core-js/features/string/pad-start'`
   - 원래는 core-js를 설치해야하지만 cra에서는 기본적으로 core-js 가 깔려있으므로
 
-## 환경변수
+### 환경변수
 
 - 환경변수는 개발, 테스트 또는 배포 환경별로 다른 값을 적용할 때 유용
 - 전달된 환경변수는 코드에서 `process.env.{변수 이름}` 으로 사용할 수 있습니다.
@@ -107,3 +107,18 @@
   - `npm test` 실행시, test
   - `npm run build` 실행시, production
   - `.env.development` 나 `.env.production` 으로 속성값을 줄 수 있음
+
+<br/>
+
+## CSS 작성 방법 결정하기
+
+- 일반적인 CSS 파일로 작성하기
+  - 이름 충돌이 발생하기 쉬움
+- css-module로 작성하기
+  - 위의 충돌을 방지함, 해쉬값 사용, `*.module.css` 형태로 작성
+- Sass로 작성하기
+  - `npm install node-sass` 로 설치
+  - shared.scss 에서 값 정의해서 공통값으로 사용 가능
+- css-in-js로 작성하기
+  - css를 js 안에서 작성하는 방법
+  - `npm install styled-components`
