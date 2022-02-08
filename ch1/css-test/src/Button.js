@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './Button.module.css'
+import Style from './Button.module.scss'
 import cn from 'classnames'
 
 export default function Button({ size }) {

@@ -1,3 +1,5 @@
+@import './shared.scss';
+
 .big {
   width: 100px;
 }
@@ -6,5 +8,5 @@
 }
 .button {
   height: 30px;
-  background-color: yellow;
+  background-color: $infoColor;
 }

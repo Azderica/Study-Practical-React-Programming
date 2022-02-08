@@ -1,5 +1,5 @@
 import React from 'react';
-import Style from './Box.module.css'
+import Style from './Box.module.scss'
 
 export default function Box({ size }) {
   if (size == 'big') {

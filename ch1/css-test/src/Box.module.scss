@@ -1,3 +1,5 @@
+@import './shared.scss';
+
 .big {
   width: 200px;
 }
@@ -6,5 +8,5 @@
 }
 .box {
   height: 50px;
-  background-color: #aaaaaa;
+  background-color: $infoColor;
 }
