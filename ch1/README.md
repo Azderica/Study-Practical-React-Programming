@@ -122,3 +122,36 @@
 - css-in-js로 작성하기
   - css를 js 안에서 작성하는 방법
   - `npm install styled-components`
+
+<br/>
+
+## 단일 페이지 애플리케이션(SPA) 만들기
+
+![SPA](https://user-images.githubusercontent.com/42582516/153193344-99c35de6-73a1-4b25-ad1b-29175994631b.png)
+
+###  SPA가 가능하기 위한 조건
+
+- 자바스크립트에서 브라우저로 페이지 전환 요청을 보낼 수 있습니다.
+  - 단, 브라우저는 서버로 요청을 보내지 않아야 합니다.
+- 브라우저의 뒤로 가기와 같은 사용자의 페이지 전환 요청을 자바스크립트에서 처맇라 수 있습니다.
+  - 이때도 브라우저는 서버로 요청을 보내지 않아야 합니다.
+
+### 위 조건을 만족시켜주는 브라우저 API
+
+- pushState, replaceState 함수
+- popstate 이벤트
+
+### spa 2
+
+- `react-router-dom` 사용
+  - 상태 관리
+  - 코드 스플리팅 가능
+  - js가 커지면 처음 들어갈 때 오래 걸림
+  - `npm install react-router-dom`
+- `BrowserRouter` : 현제 페이지의 상태값을 관리 해줍니다.
+- `Link` : to에 해당하는 경로로 이동해줌
+- `Router` : path 경로에 따라 어던 컴포넌트를 렌더링 할지 결정을 해 줍니다.
+  - exact를 통해 필요한 것만 가져옵니다.
+  - Router에 속성값으로 match를 줄 수 있고, match의 url 값은 해당 라우터가 매칭된 url의 일부분을 의미합니다.
+  - `:` 파라미터를 쓰겠다고 선언한 것
+  - **react-router-dom v5 사용하기** , v6은 다름
